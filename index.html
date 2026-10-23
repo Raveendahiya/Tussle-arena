@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tussle Arena</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+  <header class="topbar">
+    <div><div class="eyebrow">LOCAL BRAWLER</div><h1>TUSSLE <span>ARENA</span></h1></div>
+    <div class="round-pill">ROUND <b id="round">01</b></div>
+  </header>
+  <section class="hud">
+    <div class="fighter-card blue">
+      <div class="fighter-line"><span>PLAYER 1</span><strong id="pHealthText">100 HP</strong></div>
+      <div class="health"><div id="pHealth" class="health-fill"></div></div>
+      <small>THE STREET KID</small>
+    </div>
+    <div class="vs">VS</div>
+    <div class="fighter-card red">
+      <div class="fighter-line"><span>CPU RIVAL</span><strong id="eHealthText">100 HP</strong></div>
+      <div class="health"><div id="eHealth" class="health-fill"></div></div>
+      <small>THE CHALLENGER</small>
+    </div>
+  </section>
+  <section class="arena-wrap">
+    <canvas id="game" width="1000" height="520" aria-label="Tussle Arena game"></canvas>
+    <div id="overlay" class="overlay">
+      <div class="overlay-card">
+        <div class="stamp">READY?</div><h2>ENTER THE ARENA</h2>
+        <p>Win five arenas. Each rival hits harder and fights faster. Dodge, punch, and block to become champion.</p>
+        <button id="startBtn">START FIGHT <span>↗</span></button>
+      </div>
+    </div>
+    <div class="corner-label">TUSSLE CITY · UNDERGROUND LEAGUE</div>
+  </section>
+  <section class="controls">
+    <div><span class="key">A</span><span class="key">D</span><span class="key">W</span><span class="key">S</span><p>MOVE / JUMP / CROUCH</p></div>
+    <div><span class="key">J</span><p>PUNCH</p></div>
+    <div><span class="key">K</span><p>HEAVY ATTACK</p></div>
+    <div><span class="key">L</span><p>BLOCK</p></div>
+    <button id="restartBtn" class="reset">↻ RESTART</button>
+  </section>
+  <footer><span>ONE RULE: KEEP YOUR FEET MOVING.</span><span id="status">Waiting for fighters…</span></footer>
+</main>
+<script src="game.js"></script>
+</body></html>
